@@ -45,6 +45,7 @@ public class Command_admin
                 ArrayList<String> specs = new ArrayList<>();
                 ArrayList<String> sysadmins = new ArrayList<>();
                 ArrayList<String> owners = new ArrayList<>();
+                ArrayList<String> lead_devs = new ArrayList<>();
                 ArrayList<ArrayList<String>> arrays = new ArrayList<>();
                 arrays.add(radmins);
                 arrays.add(sadmins);
@@ -81,7 +82,7 @@ public class Command_admin
                         case OWNER:
                             owners.add(name);
                             break;
-                        case OVERLORD:
+                        case LEAD_DEV:
                             owners.add(name);
                             break;
                         default:
@@ -107,7 +108,9 @@ public class Command_admin
                 sender.sendMessage(ChatColor.DARK_PURPLE + "    - System Admins:");
                 sender.sendMessage("        - " + StringUtils.join(sysadmins, ", "));
                 sender.sendMessage(ChatColor.DARK_RED + "    - Owners:");
-                sender.sendMessage("        - " + StringUtils.join(owners, ", "));
+                sender.sendMessage("        - " + StringUtils.join(owners
+                sender.sendMessage(ChatColor.DARK_RED + "    - Lead_Dev:");
+                sender.sendMessage("        - " + StringUtils.join(lead_dev, ", "));
                 return true;
             }
             if(args[0].equalsIgnoreCase("purge") && FOPMR_Rank.isSenior(sender))

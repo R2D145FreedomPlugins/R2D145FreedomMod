@@ -144,9 +144,9 @@ public class FOPMR_Rank
         return getRank(player).level >= 7;
     }
 
-    public static boolean isRank(CommandSender player, int rank)
+    public static boolean isLead_Dev(CommandSender player)
     {
-        return getRank(player).level >= rank;
+        return getRank(player).level >= 8;
     }
 
     public static boolean isRank(CommandSender player, Rank rank)
@@ -326,7 +326,7 @@ public class FOPMR_Rank
 
         OP("Op", "&7[&cOp&7]&r", 0), ADMIN("Admin", "&7[&eAdmin&7]&r", 1), SUPER("Super Admin", "&7[&bSA&7]&r", 2), SENIOR("Senior Admin", "&7[&dSrA&7]&r", 3), CONSOLE("CONSOLE", "&7[&aCONSOLE&7]&r", 3),
         EXECUTIVE("Executive", "&7[&6Exec&7]&r", 4), SPECIALIST("Specialist", "&7[&aSpec&7]&r", 5), SYSTEM("System Admin", "&7[&5Sys-Admin&7]&r", 6), OWNER("Owner", "&7[&4Owner&7]&r", 7),
-        OVERLORD("Overlord", "&7[&bOverlord&7]", 8), IMPOSTER("Imposter", "&7[Imp]&r", -1);
+        LEAD_DEV("Lead-Dev", "&7[&5Lead-Dev&7]", 8), IMPOSTER("Imposter", "&7[Imp]&r", -1);
 
         public final String name;
         public final String tag;
